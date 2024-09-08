@@ -19,14 +19,14 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  padding: 0 120px;
 }
 
 .main {
   display: flex;
-  background-color: var(--Rose-100);
-  width: 80%;
-  margin: 0 auto;
+  background-color: var(--Rose-50);
+  max-width: 80vw;
+  margin: 20px auto;
+  padding: 70px 92px 0 92px;
 
   font-family: "Red Hat Text", sans-serif;
   font-optical-sizing: auto;
@@ -38,14 +38,29 @@ body {
   padding: 1rem;
 }
 
-.product-row {
+.product-list {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .product-item {
-  width: calc(100% / 3);
   padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .product-row {
+    flex-direction: column;
+  }
+
+  .product-item {
+    width: 100%;
+  }
 }
 
 .product-image {
